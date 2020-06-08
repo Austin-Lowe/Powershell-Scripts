@@ -13,7 +13,7 @@ Set-Location "U05:" # Set the current location to be the site code.
 
 $ComputerList = Import-Csv -Path C:\SCCMDSL\WindowsUpgrade.csv
 
-$LimitingCollection = Get-CMDeviceCollection -Name "Contoso "
+$LimitingCollection = Get-CMDeviceCollection -Name "Contoso"
 $DestinationCollection = Get-CMDeviceCollection -Name "Windows 10 Upgrade"
 $PostUpgradeCollection = Get-CMDeviceCollection -Name "Post Windows 10"
 

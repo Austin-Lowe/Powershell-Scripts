@@ -68,7 +68,7 @@ Start-Process 'Apps:\Igor Pavlov 7-Zip 18.05\7z1805-x64.msi' -ArgumentList "/qn"
 
 Start-Process 'Apps:\Google Chrome\ChromeStandaloneSetup64.exe' -ArgumentList "/silent /install" -Wait
 
-Start-Process 'Apps:\OCS Inventory Agent 2.1.1.1\OCS-NG-Windows-Agent-Setup.exe' -ArgumentList "/S /NOSPLASH /SERVER=http://ocs.ebix.com/ocsinventory" -Wait
+Start-Process 'Apps:\OCS Inventory Agent 2.1.1.1\OCS-NG-Windows-Agent-Setup.exe' -ArgumentList "/S /NOSPLASH /SERVER=http://ocs.Contoso.com/ocsinventory" -Wait
 
 Remove-PSDrive -Name Apps -Force
 
