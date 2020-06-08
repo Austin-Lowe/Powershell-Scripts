@@ -1,15 +1,10 @@
-﻿#$OU = "OU=HPH-311J,OU=Classrooms and Labs,OU=College of Sciences,OU=Departmental OUs,DC=net,DC=ucf,DC=edu"
-#$OU = "OU=Desktops,OU=MSB-418 GTA Workroom,OU=Departments,OU=College of Sciences,OU=Departmental OUs,DC=net,DC=ucf,DC=edu"
-#$OU = "OU=Windows 10 Office Desktops,OU=Office of Instructional Resources,OU=Departmental OUs,DC=net,DC=ucf,DC=edu"
-$OU = "OU=Physics Studio Labs,OU=Classrooms and Labs,OU=College of Sciences,OU=Departmental OUs,DC=net,DC=ucf,DC=edu"
-#$OU = "OU=NetSupport Instructor Computers,OU=Classroom Consoles,OU=Console Computers,OU=Classrooms and Labs,OU=College of Sciences,OU=Departmental OUs,DC=net,DC=ucf,DC=edu"
-#$OU = "OU=Classrooms and Labs,OU=College of Sciences,OU=Departmental OUs,DC=net,DC=ucf,DC=edu"
-#$OU = "OU=Desktops, OU=Global Perspectives CHEM-117 Office, OU=Departments, OU=College of Sciences, OU=Departmental OUs, DC=net, DC=ucf, DC=edu"
-#$OU = "OU=Desktops,OU=Psychology,OU=Departments,OU=College of Sciences,OU=Departmental OUs,DC=net,DC=ucf,DC=edu"
-$NidAdminUserName = "net\au965898admin"
-$NidAdminPassword = "C:\project\au965898admin.key"
+﻿
+$OU = "OU=Labs,OU=Classrooms and Labs,OU=Contoso,OU=Departmental OUs,DC=net,DC=Contoso,DC=com"
 
-$creds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $NidAdminUserName, (Get-Content $NidAdminPassword | ConvertTo-SecureString)
+$AdminUserName = "net\admin"
+$AdminPassword = "C:\project\admin.key"
+
+$creds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AdminUserName, (Get-Content $AdminPassword | ConvertTo-SecureString)
 
 $Computers = Get-ADComputer -Filter * -SearchBase $OU
 

@@ -13,9 +13,9 @@ Set-Location "U05:" # Set the current location to be the site code.
 
 $ComputerList = Import-Csv -Path C:\SCCMDSL\WindowsUpgrade.csv
 
-$LimitingCollection = Get-CMDeviceCollection -Name "College of Health and Public Affairs SCCM Client"
-$DestinationCollection = Get-CMDeviceCollection -Name "COHPA Windows 10 Upgrade"
-$PostUpgradeCollection = Get-CMDeviceCollection -Name "COHPA Post Windows 10"
+$LimitingCollection = Get-CMDeviceCollection -Name "Contoso "
+$DestinationCollection = Get-CMDeviceCollection -Name "Windows 10 Upgrade"
+$PostUpgradeCollection = Get-CMDeviceCollection -Name "Post Windows 10"
 
 $outputCSV = @()
 
@@ -59,7 +59,7 @@ foreach($item in $ComputerList)
         }
    }
 
-   elseif($Device.Name -eq $null)
+   elseif($null -eq $Device.Name)
    {
         Write-Host $item.ROOM
    

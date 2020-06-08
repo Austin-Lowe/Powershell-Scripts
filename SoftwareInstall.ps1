@@ -92,4 +92,4 @@ if(($IACPrompt -eq "y") -or ($IACPrompt -eq "Y"))
 
 Start-Sleep -Seconds 15
 
-Add-Computer -DomainName delphi.com -OUPath "OU=Workstations,OU=EbixAtlanta,DC=delphi,DC=com" -Credential $creds -Force -Restart
+Add-Computer -DomainName delphi.com -OUPath "OU=Workstations,OU=ContosoAtlanta,DC=delphi,DC=com" -Credential $creds -Force -Restart
