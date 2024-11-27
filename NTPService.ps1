@@ -1,5 +1,4 @@
-﻿$Hostname = hostname
-$Parameters = 'HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Parameters'
+﻿$Parameters = 'HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Parameters'
 $TimeProvider = 'HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer'
 $Config = 'HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Config'
 
